@@ -1,0 +1,20 @@
+<ion-content class='login-content'>
+  <div class='login-container'>
+    <div class='logo-section'>
+      <ion-icon name='business-outline' class='logo-icon'></ion-icon>
+      <h1>DISTRIBUIDORA</h1>
+      <h2>GUMI S.A.C.</h2>
+    </div>
+    <div class='form-section'>
+      <ion-item lines='full'>
+        <ion-label position='floating'>Usuario</ion-label>
+        <ion-input type='text' [(ngModel)]='usuario'></ion-input>
+      </ion-item>
+      <ion-item lines='full'>
+        <ion-label position='floating'>Contrasena</ion-label>
+        <ion-input type='password' [(ngModel)]='password'></ion-input>
+      </ion-item>
+      <ion-button expand='block' class='login-btn' (click)='iniciarSesion()'>Iniciar Sesion</ion-button>
+    </div>
+  </div>
+</ion-content>
