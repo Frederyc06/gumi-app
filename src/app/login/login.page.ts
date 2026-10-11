@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { IonicModule, AlertController } from '@ionic/angular';
+﻿import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
@@ -13,16 +14,15 @@ import { CommonModule } from '@angular/common';
 export class LoginPage {
   usuario: string = '';
   password: string = '';
-  private readonly USER = 'admin';
-  private readonly PASS = '1234';
-  constructor(private alertCtrl: AlertController) {}
-  async iniciarSesion() {
-    if (this.usuario === this.USER && this.password === this.PASS) {
+
+  constructor(private router: Router) {}
+
+  iniciarSesion() {
+    if (this.usuario === 'admin' && this.password === '1234') {
       localStorage.setItem('isLoggedIn', 'true');
-      window.location.href = '/tabs/tab1';
+      this.router.navigate(['/tabs/tab1']);
     } else {
-      const alert = await this.alertCtrl.create({ header: 'Error', message: 'Usuario o contrasena incorrectos.', buttons: ['OK'] });
-      await alert.present();
+      alert('Usuario o contrasena incorrectos');
     }
   }
 }

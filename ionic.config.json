@@ -1,7 +1,1 @@
-{
-  "name": "mi-app",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
+{"name":"gumi-app","integrations":{},"type":"angular"}

@@ -1,34 +1,22 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>Clientes</ion-title>
+    <ion-title>👥 Clientes</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-
-  <ion-searchbar placeholder="Buscar cliente..." [(ngModel)]="busqueda" animated></ion-searchbar>
+  <ion-searchbar placeholder="Buscar cliente..." animated></ion-searchbar>
 
   <ion-list>
-    <ion-item *ngFor="let cliente of clientesFiltrados">
+    <ion-item *ngFor="let cliente of clientes">
       <ion-avatar slot="start">
-        <ion-icon name="person-circle" size="large"></ion-icon>
+        <ion-icon name="person-circle-outline" style="font-size:40px;color:#1e3a8a"></ion-icon>
       </ion-avatar>
       <ion-label>
-        <h2>{{cliente.nombre}}</h2>
-        <p>RUC: {{cliente.ruc}}</p>
-        <p>{{cliente.telefono}}</p>
+        <h2>{{ cliente.nombre }}</h2>
+        <p>RUC: {{ cliente.ruc }}</p>
+        <p>📞 {{ cliente.telefono }}</p>
       </ion-label>
-      <ion-button slot="end" fill="clear">
-        <ion-icon name="call-outline"></ion-icon>
-      </ion-button>
     </ion-item>
   </ion-list>
-
-  <!-- Botón + -->
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button color="primary" (click)="abrirFormulario()">
-      <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
-
 </ion-content>

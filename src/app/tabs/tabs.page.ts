@@ -7,8 +7,10 @@ import { RouterModule } from '@angular/router';
   templateUrl: 'tabs.page.html',
   styleUrls: ['tabs.page.scss'],
   standalone: true,
-  imports: [IonicModule, RouterModule]
+  imports: [IonicModule, RouterModule],
 })
 export class TabsPage {
+
   constructor() {}
+
 }
